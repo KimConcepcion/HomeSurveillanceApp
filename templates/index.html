@@ -1,0 +1,44 @@
+<html lang="en">
+
+<!-- Head section: -->
+<head>
+  <meta charset="utf-8">
+  <link rel='icon' href='ressources/beagle.ico' type="image/x-icon"/>
+  <link rel="stylesheet" href="/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  <title>BeagleBone House Surveillance</title>
+</head>
+
+<!-- Body section: -->
+<body>
+
+  <!-- Headline: -->
+  <h1>BeagleBone House Surveillance</h1>
+
+  <!-- CPU Stuff: -->
+  <h2>CPU Metrics</h2>
+  <canvas id="cpu_chart" width="500" height="500"></canvas>
+  <p>Speed: </p>
+  <p>Processes: </p>
+  <p>Threads: </p>
+  <h2>Indoor Metrics</h2>
+
+  <!-- JS code for CPU chart: -->
+  <script src="/cpu.js"></script>
+
+  <!-- Indoor sensor data: -->
+  <h3>Temperature</h3>
+  <canvas id="temp_chart" width="500" height="500"></canvas>
+  <p>Device: LM35DZ</p>
+  <p>Temperature: </p>
+
+  <h3>Humidity</h3>
+  <canvas id="hum_chart" width="500" height="500"></canvas>
+  <p>Device: Arduino Humidity sensor</p>
+  <p>Humidity: </p>
+
+  <!-- JS code for Temp + Hum chart: -->
+  <script src="/indoor.js"></script>
+
+</body>
+</html>
