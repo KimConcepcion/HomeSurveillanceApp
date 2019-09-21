@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 import psutil as ps
-import pandas as pd
 
 app = Flask(__name__)
 
@@ -12,18 +11,16 @@ PORT = '5000'
 ## CPU Specs:
 cpu_threads = ps.cpu_count(logical=True)
 cpu_cores = ps.cpu_count(logical=False)
-count = ps.cpu_count()
 
 ## CPU Percent:
-cpu_prc = ps.cpu_percent(1, percpu=True)
+#cpu_prc = ps.cpu_percent(1, percpu=True)
 cpu_avg_prc = ps.cpu_percent(1, percpu=False)
 
-## CPU Frequency in GHz (Originally in MHz):
+## Frequency in GHz (Originally in MHz):
 cpu_frq = ps.cpu_freq(percpu=True)
-cpu_frq = pd.DataFrame(cpu_frq) / 1000
-current_frq = cpu_frq.at[0, 'current']
-min_frq = cpu_frq.at[0, 'min']
-max_frq = cpu_frq.at[0, 'max']
+current_frq = cpu_frq[0][0] / 1000
+min_frq = cpu_frq[0][1] / 1000
+max_frq = cpu_frq[0][2] / 1000
 
 ## Index Route:
 @app.route('/')
@@ -32,7 +29,7 @@ def index():
         'index.html',
         threads=cpu_threads, cores=cpu_cores, current_speed=current_frq, cpu_average_load=cpu_avg_prc
         )
-
+    
 ## Error Route:
 @app.errorhandler(404)
 def not_found(e):
