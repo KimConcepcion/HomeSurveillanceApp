@@ -1,28 +1,28 @@
-<html lang="en">
+<html lang="en" dir="ltr">
 
-<!-- Head section: -->
 <head>
-  <meta charset="utf-8">
-  <link rel='icon' href='ressources/beagle.ico' type="image/x-icon"/>
-  <link rel="stylesheet" href="/static/css/main.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-  <title>BeagleBone House Surveillance</title>
+<meta charset="utf-8">
+<link rel='icon' href='ressources/beagle.ico' type="image/x-icon" />
+<link rel="stylesheet" href="/static/css/main.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<title>BeagleBone House Surveillance</title>
 </head>
 
-<!-- Body section: -->
 <body>
 
-  <h1>BeagleBone House Surveillance</h1>
+	<h1>BeagleBone House Surveillance</h1>
 
-  <!-- CPU Stuff: -->
-  <h2>CPU Metrics</h2>
-  <canvas id="cpu_chart" width="500" height="500"></canvas>
-  <p>CPU Model: AM3358 ARM Cortex A8</p>
-  <p>CPU Threads: {{ threads }}</p>
-  <p>CPU Cores: {{ cores }}</p>
-  <p>CPU Current Speed: {{ current_speed }} GHz</p>
-  <p>CPU Average Load:  {{ cpu_average_load }} %</p>
-  <script src="/static/js/cpu.js"></script>
+	<!-- CPU Stuff: -->
+	<h2>CPU Metrics</h2>
+	<canvas id="cpu_chart" width="500" height="500"></canvas>
+	<p>CPU Model: AM3358 ARM Cortex A8</p>
+	<p>CPU Threads: {{ threads }}</p>
+	<p>CPU Cores: {{ cores }}</p>
+	<p>CPU Current Speed: {{ current_speed }} MHz</p>
+	<p>CPU Average Load: {{ cpu_average_load }} %</p>
+	
+	<script type="text/javascript"> var cpu_data = {{cpu_average_load}} </script>
+	<script src="/static/js/cpu.js"></script>
 
 </body>
 </html>
