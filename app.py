@@ -4,12 +4,12 @@ import psutil as ps
 app = Flask(__name__)
 
 ## Network stuff:
-HOST = '192.168.1.34'
-#HOST = 'localhost'
+#HOST = '192.168.1.34'
+HOST = 'localhost'
 PORT = '5000'
 
 ## Index Route:
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
 
     ## CPU Stuff - Update per request:

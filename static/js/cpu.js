@@ -4,11 +4,11 @@ ctx.style.backgroundColor = '#FFFFFF';
 let cpu_chart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+    labels: [10,20,30,40,50,60,70,80,90,100],
     datasets: [
       {
-        label: "CPU Performance",
-        data: [86,114,106,106,107,111,133,221,783,2478],
+        label: "CPU Average Load",
+        data: [11,23,34,42,56,66,72,81,93,109],
         borderColor: "#3cba9f",
         fill: false
       }

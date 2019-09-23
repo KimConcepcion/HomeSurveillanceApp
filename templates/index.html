@@ -2,7 +2,7 @@
 
 <head>
 <meta charset="utf-8">
-<link rel="shortcut icon" href="beagle.ico">
+<link rel="shortcut icon" href="static/beagle.ico">
 <link rel="stylesheet" href="static/css/main.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 <title>BeagleBone House Surveillance</title>
@@ -20,6 +20,8 @@
 	<p>CPU Cores: {{ cores }}</p>
 	<p>CPU Current Speed: {{ current_speed }} MHz</p>
 	<p>CPU Average Load: {{ cpu_average_load }} %</p>
+	
+	<!-- <script type="text/javascript"> var cpu_data = {{cpu_average_load}} </script> -->
 	
 	<script src="static/js/cpu.js"></script>
 
