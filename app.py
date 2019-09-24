@@ -16,7 +16,7 @@ def get_cpu_load():
     cpu_average_load = list()
     
     for i in range(5):
-        cpu_average_load.append( ps.cpu_percent(1, percpu=False) )
+        cpu_average_load.append( ps.cpu_percent(0.3, percpu=False) )
     return cpu_average_load
 
 ## Index Route:

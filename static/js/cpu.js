@@ -30,7 +30,7 @@ let cpu_chart = new Chart(ctx, {
             labelString: "Average Load [%]"
           },
           ticks: {
-        	  max: 5
+        	  max: 30
           }
         }]
     }
