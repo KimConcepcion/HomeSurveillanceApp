@@ -11,12 +11,15 @@ PORT = '5000'
 ## Static CPU info:
 cpu_threads = ps.cpu_count(logical=True)
 cpu_cores = ps.cpu_count(logical=False)
+cpu_frq = ps.cpu_freq(percpu=True)
+min_frq = cpu_frq[0][1]
+max_frq = cpu_frq[0][2]
 
 def get_cpu_load():
     cpu_average_load = list()
     
     for i in range(5):
-        cpu_average_load.append( ps.cpu_percent(0.3, percpu=False) )
+        cpu_average_load.append( ps.cpu_percent(0.5, percpu=False) )
     return cpu_average_load
 
 ## Index Route:
@@ -32,7 +35,7 @@ def index():
     
     return render_template(
         'index.html', 
-        threads=cpu_threads, cores=cpu_cores, current_speed=current_frq, cpu_average_load=cpu_current_avg_prc,
+        threads=cpu_threads, cores=cpu_cores, current_speed=current_frq, minimum_speed=min_frq, maximum_speed=max_frq, cpu_average_load=cpu_current_avg_prc,
         cpu_avg_load_0=cpu_avg_prc[0], cpu_avg_load_1=cpu_avg_prc[1], cpu_avg_load_2=cpu_avg_prc[2], 
         cpu_avg_load_3=cpu_avg_prc[3], cpu_avg_load_4=cpu_avg_prc[4]
         )

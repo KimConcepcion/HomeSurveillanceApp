@@ -14,12 +14,14 @@
 	<h1>BeagleBone House Surveillance</h1>
 
 	<!-- CPU Stuff: -->
-	<h2>CPU Metrics</h2>
+	<h2>CPU Status</h2>
 	<canvas id="cpu_chart" width="500" height="500"></canvas>
 	<p>CPU Model: AM3358 ARM Cortex A8</p>
 	<p>CPU Threads: {{ threads }}</p>
 	<p>CPU Cores: {{ cores }}</p>
 	<p>CPU Current Speed: {{ current_speed }} MHz</p>
+	<p>CPU Minimum Speed: {{ minimum_speed }} MHz</p>
+	<p>CPU Maximum Speed: {{ maximum_speed }} MHz</p>
 	<p>CPU Average Load: {{ cpu_average_load }} %</p>
 
 	<!-- <script type="text/javascript"> var cpu_data = {{cpu_average_load}} </script> -->
