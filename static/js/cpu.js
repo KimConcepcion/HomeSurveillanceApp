@@ -1,7 +1,7 @@
-var ctx = document.getElementById('cpu_chart');
-ctx.style.backgroundColor = '#FFFFFF';
+var ctx_cpu = document.getElementById('cpu_chart');
+ctx_cpu.style.backgroundColor = '#FFFFFF';
 
-let cpu_chart = new Chart(ctx, {
+let cpu_chart = new Chart(ctx_cpu, {
   type: 'line',
   data: {
     labels: [1,2,3,4,5],

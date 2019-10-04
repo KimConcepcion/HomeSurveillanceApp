@@ -1,0 +1,82 @@
+<html lang="en" dir="ltr">
+
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="static/beagle.ico">
+<link rel="stylesheet" href="static/css/main.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<title>BeagleBone System Status</title>
+</head>
+
+<body>
+
+	<div class="row">
+		<h1>BeagleBone System Status</h1>
+		
+		<!-- CPU Data -->
+		<div class="cpu">
+			<h2>CPU</h2>
+			<canvas id="cpu_chart" width="500" height="500"></canvas>
+			<p>CPU Model: AM3358 ARM Cortex A8</p>
+			<p>CPU Threads: {{ threads }}</p>
+			<p>CPU Cores: {{ cores }}</p>
+			<p>CPU Current Speed: {{ current_speed }} MHz</p>
+			<p>CPU Minimum Speed: {{ minimum_speed }} MHz</p>
+			<p>CPU Maximum Speed: {{ maximum_speed }} MHz</p>
+			<p>CPU Average Load: {{ cpu_average_load }} %</p>
+
+			<script type="text/javascript">
+		var cpu_avg_load_0 = {{ cpu_avg_load_0 }}
+		var cpu_avg_load_1 = {{ cpu_avg_load_1 }}
+		var cpu_avg_load_2 = {{ cpu_avg_load_2 }}
+		var cpu_avg_load_3 = {{ cpu_avg_load_3 }}
+		var cpu_avg_load_4 = {{ cpu_avg_load_4 }}
+	</script>
+			<script src="static/js/cpu.js"></script>
+		</div>
+
+		<!-- Memory Data -->
+		<div class="Memory">
+			<h2>Memory</h2>
+			<canvas id="memory_chart" width="500" height="500"></canvas>
+			
+			<div class="virtual">
+			<h3>Virtual Memory:</h3>
+			<li> Total Physical memory: {{ total_vir_mem }} Mb </li>
+			<p>Available memory: {{ available_vir_mem }} Mb</p>
+			<p>Free memory: {{ free_vir_mem }} Mb</p>
+			<p>Used memory: {{ used_vir_mem }} Mb</p>
+			<p>Cached memory: {{ cached_vir_mem }} Mb</p>
+			<p>Shared memory: {{ shared_vir_mem }} Mb</p>
+			</div>
+			
+			<div class="swap">
+			<h3>Swap Memory:</h3>
+			<p>Total Swap memory: {{ total_swap_mem }} Mb</p>
+			<p>Used Swap memory: {{ used_swap_mem }} Mb</p>
+			<p>Free Swap memory: {{ free_swap_mem }} Mb</p>
+			<p>Swapped in from disk: {{ sin_mem }} Mb</p>
+			<p>Swapped out from disk: {{ sout_mem }} Mb</p>
+			</div>
+			
+			<script type="text/javascript">
+			var aval_mem = {{ available_vir_mem }}
+			var free_mem = {{ free_vir_mem }}
+			var used_mem = {{ used_vir_mem }}
+			</script>
+			<script src="static/js/memory.js"></script>
+		</div>
+
+		<!-- Storage Data -->
+		<div class="Storage">
+			<h2>Storage</h2>
+			<canvas id="storage_chart" width="500" height="500"></canvas>
+			<p>Used Storage: </p>
+			<p>Free Storage: </p>
+			
+			<script src="static/js/storage.js"></script>
+		</div>
+	</div>
+
+</body>
+</html>

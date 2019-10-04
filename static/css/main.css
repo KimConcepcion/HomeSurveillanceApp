@@ -3,26 +3,74 @@ body {
 }
 
 h1 {
-  color : #FFF10D;
-  text-align: left;
-  text-decoration: underline;
+  color : #6FFFE9;
+  text-align: center;
   font-weight: bold;
+  font-size: 35px;
 }
 
 h2 {
-  color : #FFF10D;
+  color : #6FFFE9;
   text-align: left;
   font-weight: bold;
+  font-size: 30px;
 }
 
 h3 {
-  color : #FFF10D;
+  color : #6FFFE9;
   text-align: left;
   font-weight: bold;
 }
 
 p {
-  color : #FFF10D;
+  color : #6FFFE9;
   text-align: left;
-  font-weight: bold;
+  //font-weight: bold;
+}
+
+li {
+  color : #6FFFE9;
+  text-align: left;
+}
+
+div.row {
+	width: 100%;
+	text-align: center;
+}
+
+div.cpu {
+	width: 500;
+	height: 850;
+	display: inline-block;
+	margin: 30px;
+	vertical-align: top;
+}
+
+div.memory {
+	width: 500;
+	height: 850;
+	display: inline-block;
+	margin: 30px;
+	vertical-align: top;
+}
+
+div.virtual {
+	height: 271;
+	display: inline-block;
+	vertical-align: top;
+}
+
+div.swap {
+	height: 271;
+	display: inline-block;
+	margin: 30px;
+	margin-top: 0%;
+}
+
+div.storage {
+	width: 500;
+	height: 850;
+	display: inline-block;
+	margin: 30px;
+	vertical-align: top;
 }
