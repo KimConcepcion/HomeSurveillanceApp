@@ -6,15 +6,15 @@ let storage_chart = new Chart(ctx_storage, {
 	data: {
 		datasets: [{
 			label: "Memory Usage",
-			data: [1, 2],
+			data: [used_strg, free_strg],
 			backgroundColor: [
 				"#224B8B",
 				"#0097FF",
 			]
 		}],
 		labels: [
-			'Used Storage',
-			'Free Storage'
+			'Used Storage [Gb]',
+			'Free Storage [Gb]'
 		]
 	},
 	options: {

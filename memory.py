@@ -19,56 +19,47 @@ class Memory():
     swap_sout = 0
     
     ##    VIRTUAL MEMORY
-    ##    Get total memory:
     def get_total_vir_memory(self):
         val = ps.virtual_memory()
         #return bytes2human(val.total)
         return round(val.total / 1024000)
     
-    ##    Get available memory:
     def get_available_vir_memory(self):
         val = ps.virtual_memory()
         #return bytes2human(val.available)
         return round(val.available / 1024000)
     
-    ##    Get free memory:
     def get_free_vir_memory(self):
         val = ps.virtual_memory()
         #return bytes2human(val.free)
         return round(val.free / 1024000)
     
-    ##    Get used memory:
     def get_used_vir_memory(self):
         val = ps.virtual_memory()
         #return bytes2human(val.used)
         return round(val.used / 1024000)
     
-    ##    Get cached memory:
     def get_cached_memory(self):
         val = ps.virtual_memory()
         #return bytes2human(val.cached)
         return round(val.cached / 1024000)
     
-    ##    Get shared memory:
     def get_shared_memory(self):
         val = ps.virtual_memory()
         #return bytes2human(val.shared)
         return round(val.shared / 1024000)
     
     ##    SWAP MEMORY
-    ##    Get total memory:
     def get_total_swap_memory(self):
         val = ps.swap_memory()
         #return bytes2human(val.total)
         return round(val.total / 1024000)
     
-    ##    Get used memory:
     def get_used_swap_memory(self):
         val = ps.swap_memory()
         #return bytes2human(val.used)
         return round(val.used / 1024000)
     
-    ##    Get free memory:
     def get_free_swap_memory(self):
         val = ps.swap_memory()
         #return bytes2human(val.free)

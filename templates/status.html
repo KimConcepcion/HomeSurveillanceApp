@@ -42,12 +42,12 @@
 			
 			<div class="virtual">
 			<h3>Virtual Memory:</h3>
-			<li> Total Physical memory: {{ total_vir_mem }} Mb </li>
+			<p> Total Physical memory: {{ total_vir_mem }} Mb </p>
 			<p>Available memory: {{ available_vir_mem }} Mb</p>
 			<p>Free memory: {{ free_vir_mem }} Mb</p>
 			<p>Used memory: {{ used_vir_mem }} Mb</p>
-			<p>Cached memory: {{ cached_vir_mem }} Mb</p>
-			<p>Shared memory: {{ shared_vir_mem }} Mb</p>
+			<!-- <p>Cached memory: {{ cached_vir_mem }} Mb</p> -->
+			<!-- <p>Shared memory: {{ shared_vir_mem }} Mb</p>  -->
 			</div>
 			
 			<div class="swap">
@@ -71,9 +71,15 @@
 		<div class="Storage">
 			<h2>Storage</h2>
 			<canvas id="storage_chart" width="500" height="500"></canvas>
-			<p>Used Storage: </p>
-			<p>Free Storage: </p>
+			<p>Total Storage: {{ total_storage }} Gb</p>
+			<p>Used Storage: {{ used_storage }} Gb</p>
+			<p>Free Storage: {{ free_storage }} Gb</p>
 			
+			<script type="text/javascript">
+			var total_strg = {{ total_storage }}
+			var used_strg = {{ used_storage }}
+			var free_strg = {{ free_storage }}
+			</script>
 			<script src="static/js/storage.js"></script>
 		</div>
 	</div>
