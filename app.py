@@ -7,8 +7,8 @@ from storage import Storage
 
 app = Flask(__name__)
 
-#HOST = '192.168.1.34'
-HOST = 'localhost'
+HOST = '192.168.1.34'
+#HOST = 'localhost'
 PORT = '5000'
 
 cpu = CPU()
@@ -24,25 +24,25 @@ def index():
     cpu_avg_prc = cpu.get_cpu_load()
     cpu.cur_prc = cpu.get_current_cpu_percent()
     cpu.cur_frq = cpu.get_current_cpu_frequency()
-    
+
     # Virtual Memory:
     mem.vir_total = mem.get_total_vir_memory()
     mem.vir_available = mem.get_available_vir_memory()
     mem.vir_free = mem.get_free_vir_memory()
     mem.vir_used = mem.get_used_vir_memory()
-    
+
     #    Swap Memory:
     mem.swap_total = mem.get_total_swap_memory()
     mem.swap_used = mem.get_used_swap_memory()
     mem.swap_free = mem.get_free_swap_memory()
     mem.swap_sin = mem.get_sin()
     mem.swap_sout = mem.get_sout()
-    
+
     #    Storage:
     total_strg = strg.get_total_storage()
     used_strg = strg.get_used_storage()
     free_strg = strg.get_free_storage()
-    
+
     #    Return the html page:
     return render_template(
         'status.html', 
