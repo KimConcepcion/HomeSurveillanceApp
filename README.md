@@ -1,4 +1,4 @@
 # HomeSurveillanceApp
 Web application powered by BeagleBone Black
 
-![test](test.jpg)
+![test](https://github.com/KimConcepcion/HomeSurveillanceApp/blob/master/test.JPG)
